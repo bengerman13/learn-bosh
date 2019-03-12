@@ -23,7 +23,8 @@ app/guid  running        -   10.244.0.2
 <p>Add route to VirtualBox network:</p>
 <div class="terminal-block">
   <h4 class="terminal-code-text">$ sudo route add -net 10.244.0.0/16    192.168.50.6 # Mac OS X</h4>
-  <h4 class="terminal-code-text">$ sudo route add -net 10.244.0.0/16 gw 192.168.50.6 # Linux</h4>
+  <h4 class="terminal-code-text">$ sudo ip route add 10.244.0.0/16 via 192.168.50.6 # Linux (newer)</h4>
+  <h4 class="terminal-code-text">$ sudo route add -net 10.244.0.0/16 gw 192.168.50.6 # Linux (older)</h4>
   <h4 class="terminal-code-text">$ route add           10.244.0.0/16    192.168.50.6 # Windows</h4>
 </div>
 
